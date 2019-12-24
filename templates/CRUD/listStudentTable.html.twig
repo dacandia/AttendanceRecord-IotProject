@@ -1,0 +1,47 @@
+{% extends 'BaseTemplate/base.html.twig' %}
+{% block title %}List Students{% endblock %}
+{% block body %}
+<h2>List of Students</h2>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Career</th>
+            <th scope="col">Student's Number</th>
+            <th scope="col">Status</th>
+            <th scope="col">Article 34</th>
+        </th>
+    </thead>
+    <tbody>
+        {% for student in students %}
+            <tr>
+                <th class="table-active" scope="row">{{ student.idStudent }}</th>
+                <td class="table-active">{{ student.firstname }}</td>
+                <td class="table-active">{{ student.lastname }}</td>
+                <td class="table-active">{{ student.email }}</td>
+                <td class="table-active">{{ student.phoneNumber }}</td>
+                <td class="table-active">{{ student.career }}</td>
+                <td class="table-active">{{ student.studentsNumber }}</td>
+                <td class="table-active">
+                {% if student.isActive == false %}
+                    No
+                {% else %}
+                    Yes
+                {% endif %}
+                </td>
+                <td class="table-active">
+                    {% if student.isArticle34 == false %}
+                        No
+                    {% else %}
+                        Yes
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

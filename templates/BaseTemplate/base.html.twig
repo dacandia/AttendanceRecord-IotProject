@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% include 'BaseTemplate/styles.html.twig' %}
+        {% block stylesspecial %}{% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            {% include 'BaseTemplate/sidebar.html.twig' %}
+            <div id="content">
+                {% include 'BaseTemplate/navigation.html.twig' %}
+                <div class="contentBody">
+                    {% block body %} {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% include 'BaseTemplate/scripts.html.twig' %}
+        {% block javaspecial %}{% endblock %}
+    </body>
+</html>

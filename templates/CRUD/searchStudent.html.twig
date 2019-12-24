@@ -1,0 +1,16 @@
+{% extends 'BaseTemplate/base.html.twig' %}
+{% block title %} Search Student {% endblock %}
+{% block body %}
+    <h3>Student's Lastname</h3>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <input type="text" class="form-control" id="txtLastName" name="txtLastName" placeholder="Student's Lastname">
+            </div>
+            <div class="form-group col-auto">
+                <button type="button" class="btn btn-success" id="sendLastName">Send</button>
+            </div>
+        </div>
+    </form>
+    <div id="infoTable"></div>
+{% endblock %}

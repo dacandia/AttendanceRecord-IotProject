@@ -1,0 +1,20 @@
+.contentBody {
+    margin: 5%;
+}
+
+h2 {
+    text-align: center;
+}
+
+#attendanceChart {
+    width: 80%;
+    height: 80%;
+}
+
+#formAnalytics {
+    border: 2px solid #c5cacf;
+    padding: 15px 15px 0 5%;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #c5cacf;
+}

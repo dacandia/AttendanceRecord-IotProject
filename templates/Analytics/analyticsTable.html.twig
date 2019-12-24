@@ -1,0 +1,20 @@
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Student</th>
+            <th scope="col">Registration Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+            <tr>
+                <th scope="row">{{ student.idAttendance }}</th>
+                <td>{{ student.keySubject }}</td>
+                <td>{{ student.student.lastname }}</td>
+                <td>{{ student.registrationTime|date("Y/m/d H:i:s",'America/Mexico_City') }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

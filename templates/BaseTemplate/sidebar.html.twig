@@ -1,0 +1,51 @@
+<!-- Sidebar -->
+{% block sidebar %}
+        <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>DWR</h3>
+            <strong>AR</strong>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-home"></i>
+                    Students
+                </a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="/iot/registerStudent">Register</a>
+                    </li>
+                    <li>
+                        <a href="/iot/searchStudent">Search</a>
+                    </li>
+                    <li>
+                        <a href="/iot/listStudents">List Students</a>
+                    </li>
+                    <li>
+                        <a href="/iot/chageStudent">Update</a>
+                    </li>
+                    <li>
+                        <a href="/iot/deleteStudent">Delete</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-copy"></i>
+                    Record
+                </a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="/record/attendance_analytics">Attendance</a>
+                    </li>
+                </ul>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i>
+                    About Us
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+{% endblock %}

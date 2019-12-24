@@ -1,0 +1,18 @@
+{% extends 'BaseTemplate/base.html.twig' %}
+{% block title %}Update Student{% endblock %}
+{% block body %}
+<h3>Choose a Student<h3>
+<div class="form-row">
+    <div class="form-group col-md-8">
+        <select class="form-control" id="studentOption" name="studentOption" placeholder="choose a student">
+            {% for student in students %}
+                <option>{{ student.lastname }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-group col-auto">
+        <button type="button" class="btn btn-success" id="sendStudent">Send</button>
+    </div>
+</div>
+<div id="updatedForm"></div>
+{% endblock %}
